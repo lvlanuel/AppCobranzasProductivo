@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--- Agregamos el layout tool_bar creado -->
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar"></include>
+
+        <LinearLayout
+            android:layout_width="356dp"
+            android:layout_height="match_parent"
+            android:gravity="top|center"
+            android:orientation="vertical"
+            android:paddingTop="50dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="224dp"
+                android:layout_height="78dp"
+                android:paddingTop="@dimen/padding_top_logo"
+                app:srcCompat="@drawable/logo_sud" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="45dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="51dp"
+                    android:layout_height="43dp"
+                    app:srcCompat="@drawable/user_people"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="67dp" />
+
+                <EditText
+                    android:id="@+id/usuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Usuario"
+                    android:inputType="textPersonName"
+                    android:textColorLink="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_top_contrasena">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="51dp"
+                    android:layout_height="43dp"
+                    app:srcCompat="@drawable/seguridad_cerradur"
+                    tools:layout_editor_absoluteX="60dp"
+                    tools:layout_editor_absoluteY="67dp" />
+
+                <EditText
+                    android:id="@+id/contrasenia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Contraseña"
+                    android:inputType="textPersonName|textPassword" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/padding_top_contrasena">
+
+                <Button
+                    android:id="@+id/ingresar"
+                    style="@style/boton_azul"
+                    android:layout_width="212dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Entrar"
+                    android:textColor="@android:color/background_light" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarCliente"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

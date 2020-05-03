@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_top_logo">5dp</dimen>
+    <dimen name="padding_top_contrasena">30dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

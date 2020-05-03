@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listado_cuotas_polizas">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <Button
+                android:id="@+id/btn_guardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+                android:text="GUARDAR"
+                android:textColor="@android:color/background_light"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_paga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_dark"
+                android:text="Calcular"
+                android:textColor="@color/cardview_light_background" />
+
+            <Button
+                android:id="@+id/btn_paga2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:onClick="refrescar_actividad"
+                android:text="Restablecer"
+                android:textColor="@color/cardview_light_background" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/user_people" />
+
+                <TextView
+                    android:id="@+id/tv_nombre_cliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOMBRE CLIENTE"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/ci_cliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="12"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/ic_launcher_round" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID RECIBO SUD: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_id_recibo_sudsys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="id.."
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/ic_launcher_round" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NUMERO RECIBO SUD: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_numero_recibo_sudsys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="13"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/dolar_7" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T. CAMBIO (Bs): "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6.96"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/dolar_6" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RECIBO (Bs): "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_recibo_bs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/dolar_6" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RECIBO ($us): "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_recibo_sus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/pagar" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONSUMO ($us): "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_consumo_recibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/pagar" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SALDO ($us): "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_saldo_recibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="63dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MORA: "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/tipo_mora"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedor_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progressBarCargando"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ly_contenedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_light_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_musicas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

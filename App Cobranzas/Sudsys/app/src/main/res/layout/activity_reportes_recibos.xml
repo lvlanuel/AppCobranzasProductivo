@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reportes_recibos">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--- Agregamos el layout tool_bar creado -->
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar"></include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nro Recibo:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/numero_recibo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="100"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_desde"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#cae5f7"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tvfecha_desde"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fecha desde:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <CalendarView
+                        android:id="@+id/desde"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_hasta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#cae5f7"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tvfecha_desde"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fecha hasta:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <CalendarView
+                        android:id="@+id/hasta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <Button
+                        android:id="@+id/buscar"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="lista_recibos"
+                        android:text="Buscar Recibos"
+                        android:textColor="@android:color/background_light" />
+
+                    <EditText
+                        android:id="@+id/tdesde"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name"
+                        android:visibility="invisible" />
+
+                    <EditText
+                        android:id="@+id/thasta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

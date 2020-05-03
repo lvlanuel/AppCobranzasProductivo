@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_lista"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/background_light">
+
+    <LinearLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:weightSum="5"
+        android:background="@drawable/border_para_layouut">
+
+        <ImageView
+            android:id="@+id/img_musica"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tv_ramo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="APLICACION MOVIL COBRANZAS SUDSYS"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_sucursal3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_cia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="VERSION 1.0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_sucursal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="DESARROLLADO POR COBOSER S.R.L."
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_sucursal2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_sucursal4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_no_poliza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="@copyright Sudamericana S.R.L."
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_sucursal5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="2019"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

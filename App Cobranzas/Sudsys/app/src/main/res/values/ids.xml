@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="insertar" type="id" />
+    <item name="contrasenia" type="id" />
+    <item name="ingresar" type="id" />
+    <item name="text_usuario" type="id" />
+</resources>

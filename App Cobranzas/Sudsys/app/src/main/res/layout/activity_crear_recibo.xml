@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crear_recibo">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!--- Agregamos el layout tool_bar creado -->
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar"></include>
+
+        <LinearLayout
+            android:id="@+id/cmb_tipo_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="false"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+            <ProgressBar
+                android:id="@+id/progressBarCliente"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo Búsqueda Cliente"
+                        android:textColor="#3498DB"
+                        android:textSize="18sp"
+                        tools:textColor="#3498DB" />
+
+                    <Spinner
+                        android:id="@+id/tipo_cliente"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewLiquidacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No. Liquidación"
+                        android:textColor="#3498DB"
+                        android:textSize="18sp"
+                        tools:textColor="#3498DB" />
+
+                    <EditText
+                        android:id="@+id/txt_liquidacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="SUD-29302"
+                        android:inputType="textPersonName"
+                        android:singleLine="false" />
+
+                    <TextView
+                        android:id="@+id/textViewNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre/Empresa"
+                        android:textColor="#3498DB"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        tools:textColor="#3498DB" />
+
+                    <EditText
+                        android:id="@+id/txt_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Ej: Juan/Empresa"
+                        android:inputType="textPersonName"
+                        android:singleLine="false"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewAp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido Paterno"
+                        android:textColor="#3498DB"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/txt_apellido_paterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Ej: Perez"
+                        android:inputType="textPersonName"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewAm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apellido Materno"
+                        android:textColor="#3498DB"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/txt_apellido_materno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Ej: Loza"
+                        android:inputType="textPersonName"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textViewCiNit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CI/NIT"
+                        android:textColor="#3498DB"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/txt_ci_nit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Ej: 2458763"
+                        android:inputType="number"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        style="@style/boton_azul"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/holo_green_light"
+                        android:onClick="lista_clientes"
+                        android:text="Buscar"
+                        android:textColor="@android:color/background_light" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

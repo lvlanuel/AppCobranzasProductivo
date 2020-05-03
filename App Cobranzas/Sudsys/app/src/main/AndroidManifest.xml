@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cmacchiavelli.sudsys">
+
+    <!-- PERMISOS PARA QUE PUEDAN ACCEDER A WEBSERVICE LAS APLICACIONES -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- PERMISOS PARA QUE PUEDAN ACCEDER AL EMAI Y MODELO DEL TELEFONO -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- PERMISOS PARA QUE PUEDAN ACCEDER AL BLUETOOTH DEL TELEFONO -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- PERMISOS PARA QUE PUEDAN ACCEDER AL INTERNET DEL TELEFONO -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".info"
+            android:label="@string/title_activity_info"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".pantalla_principal" />
+        <activity android:name=".crear_recibo" />
+        <activity android:name=".lista_clientes" />
+        <activity android:name=".emision_recibo" />
+        <activity android:name=".emision_recibo_confirmar" />
+        <activity android:name=".emision_recibos_imprimir" />
+        <activity android:name=".crear_recibo_manual" />
+        <activity android:name=".reportes_recibos" />
+        <activity android:name=".reportes_recibos_listar" />
+        <activity android:name=".reportes_recibos_imprimir" />
+        <activity android:name=".listado_cuotas_polizas" />
+        <activity android:name=".listado_cuotas_polizas_confirmar" />
+        <activity android:name=".listado_cuotas_polizas_imprimir" />
+        <activity android:name=".listado_imprime_cuota" />
+        <activity android:name=".reportes_amortizaciones" />
+        <activity android:name=".reportes_recibos_pendientes_listar" />
+        <activity android:name=".listado_polizas_clientes" />
+        <activity android:name=".reportes_recibos_creados" />
+        <activity android:name=".pre_amortizacion_listado" />
+        <activity android:name=".listado_pre_polizas_clientes"></activity>
+    </application>
+
+</manifest>
